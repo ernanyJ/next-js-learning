@@ -1,0 +1,1 @@
+Sempre é executado quando a página abre
