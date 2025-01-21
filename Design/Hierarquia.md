@@ -119,3 +119,65 @@ Se o usuário está procurando pelas dimensões da página, ele provavelmente es
 ![[Pasted image 20250121115934.png]]
 
 Não desenfatize muito o dado nesses cenários. Ainda é uma informação importante. Apenas use uma cor mais escura para a label e uma _um pouco_ mais clara para o valor.
+
+### BALANÇO ENTRE WEIGHT E CONSTRASTE 
+
+A razão pela qual textos bold chamam mais atenção que os normais é porque ele ocupa mais pixels na tela. Isso tem efeitos em outras coisas além de texto.
+
+Ícones geralmente são bem "pesados" visualmente e cobrem bastante área da interface. Quando você coloca um ícone do lado de um texto, o ícone costuma ficar enfatizado 
+
+![[Pasted image 20250121142629.png]]
+
+Diferente do texto, não temos como diminuir o peso de um ícone. Uma forma simples de balancear a hierarquia desses elementos é brincando com as cores:
+
+![[Pasted image 20250121142701.png]]
+
+
+Isso funciona muito bem pra balancear elementos que tem diferentes pesos (weight). Reduzir o contraste funciona como um contrabalanço, fazendo elementos mais pesados parecerem mais leves mesmo que o weight não tenha sido alterado.
+
+O contrário também funciona. Quando precisamos aumentar a enfatização de um elemento sutil, como aquelas pequenas bordas de 1px, caso aumentemos o contraste dessa borda, o efeito fica barulhento e sujo:
+
+![[Pasted image 20250121143004.png]]
+
+
+
+Nesses casos, uma boa solução seria aumentar o peso:
+
+![[Pasted image 20250121143023.png]]
+
+Deixamos a borda um pouco mais pesada sem perder o toque suave que ela deve ter.
+
+## Semantics são secundárias
+
+Quando há múltiplas ações que um usuário pode tomar, é comum cair na armadilha de desenhar aquelas ações baseadas puramente em semânticas:
+![[Pasted image 20250121143202.png]]
+
+Semânticas são uma parte importante do design de botoões, mas isso nã́o significa que você deve esquecer a hierarquia.
+
+Todos os elementos numa UI estão numa pirâmide de importância. Na maioria dos casos, uma parte de uma UI tem apenas uma única ação principal, uma ou outra ação secundária menos importante, e uma ação terciária, quase esquecida e/ou não utilizada. 
+
+Quando desenhamos essas ações, é importante comunicar seus lugares na hierarquia.
+
+- Botões primários devem ser óbvios. Sólidos, background com cores com alto contraste.
+- Botões secundários devem ser clean, mas não proeminentes. Outlined styles ou fundos com menos contraste são boas opções para estes.
+- Botões terciários devem ser descobríveis, mas não intrusivos. Estilizar esses botões como links são geralmente a melhor abordagem.
+- 
+![[Pasted image 20250121143641.png]]
+
+Quando tomamos uma abordagem priorizando a hierarquia pra desenhar as ações de uma parte da nossa UI, o resultado é uma interface muito mais clean, sem pesar a vista  e que tem uma comunicação mais clean
+
+![[Pasted image 20250121143815.png]]
+
+
+### DESTRUCTIVE ACTIONS
+
+Uma ação destrutiva não significa que o botão deve ser grande, pesado e vermelho.
+
+Se uma ação destrutiva não é a ação primária de uma tela, é melhor aplicar um estilo secundário ou terciário.
+
+![[Pasted image 20250121143948.png]]
+
+Combine isso com um dialog de confirmação onde a ação destrutiva realmente é a ação primária, e aplique o estilo grande, pesado e vermelho de fato.
+
+![[Pasted image 20250121144048.png]]
+
